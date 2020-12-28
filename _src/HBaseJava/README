@@ -1,0 +1,40 @@
+
+HBaseShell : Shell commands for Examples 1 - 7  
+
+Java code 
+
+To run the Java code : 
+1) Add the Hbase jars to your project ($HBASE_HOME/lib)
+2) Run directly from the IDE
+
+Class files for the examples
+Ex 8: admin.createTable
+Ex 9: put.singlePut
+Ex 10: put.listPuts
+Ex11: get.singleGet
+Ex12: get.listGets
+Ex13: delete.singleDelete
+Ex14: delete.listDeletes
+Ex15: batch.batchOp
+Ex16: scan.scanRows
+Ex17: admin.deleteTable
+Ex18: filters.RowFilter
+Ex19: filters.colValueFilter
+Ex 20: filters.filterList
+Ex 21: filters.filterList
+Ex 22: counters.counter
+
+NotificationService : notify.Main
+MapReduce            : mapReduce.Main
+
+To run MapReduce: 
+First create notifications table and add some notifications (use the HBaseShell file to do this)
+Then create a summary table
+hbase shell> create 'summary','metrics'
+
+Navigate to the folder where you have the jar : Within this source code directory
+ "out/artifacts/HBaseJava_jar/"
+ 
+>hadoop jar HBaseJava.jar mapReduce.Main  
+
+

@@ -1,0 +1,31 @@
+
+# Ex 1 
+>create 'notifications','attributes','metrics'
+
+# Ex 2
+>put 'notifications',1, 'attributes:type','promotion'
+>put 'notifications',1, 'attributes:text','"Hi there! Buy this thing"'
+
+> put 'notifications',2, 'attributes:for_user','Chaz'
+> put 'notifications',2, 'attributes:type','Comment'
+
+# Ex 3
+>put 'notifications',2, 'metrics:open',0
+>put 'notifications',2, 'metrics:open',1
+
+# Ex 4
+
+> get 'notifications',2
+>  get 'notifications',2,'metrics:open'
+>  get 'notifications',2,'metrics:open','attributes:type'
+
+# Ex 5
+> scan 'notifications',{COLUMNS => ['attributes:type'],LIMIT => 1,STARTROW => "2"}
+
+# Ex 6
+> delete 'notifications',2, 'attributes:for_user','Chaz'
+
+# Ex 7 
+> disable 'notifications'
+> drop 'notifications'
+
